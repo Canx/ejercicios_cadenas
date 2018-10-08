@@ -1,15 +1,25 @@
 package ahorcado;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Ahorcado ahorcado = new Ahorcado("MURCIELAGO", 10);
-		System.out.println("Tienes 10 intentos");
+		List<String> listaPalabras = Arrays.asList("MURCIELAGO", "PATATA", "MARIPOSA");
+		
+		Random random = new Random();
+		int index = random.nextInt(listaPalabras.size());
+	
+		Ahorcado ahorcado = new Ahorcado(listaPalabras.get(index), 10);
+		
+		
 		Character letra = new Character(' ');
 		Scanner scanner = new Scanner(System.in);
 		do {
+			System.out.println("Tienes " + ahorcado.intentos + " intentos");
 			System.out.println(ahorcado.oculta);
 			
 			System.out.println("Escribe una letra:");

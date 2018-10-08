@@ -45,7 +45,7 @@ public class Ahorcado {
 				return false;
 			}
 			
-			System.out.println("No está. Te quedan " + this.intentos + " intentos.");
+			System.out.println("No está.");
 			
 		}
 		
